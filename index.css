@@ -28,12 +28,11 @@ body {
     ". side_nav slide_show slide_show . " 
     ". side_nav main_panel right_panel . "  
     "footer footer footer footer footer" ;
-    grid-template-columns: 1fr 300px 900px 600px 1fr;
-    grid-template-rows: 75px 120px 50px 2fr 12fr 80px;
-    height: 100vh;
+    grid-template-columns: 1fr 300px 1000px 500px 1fr;
+    grid-template-rows: 75px 120px 50px 100px 1fr 150px;
+    height: 99.5vh;
     overflow: hidden;
     padding: 5px 25px;
-    width: calc(98.5vw - 25px);
 }
 
 body > div {
@@ -227,13 +226,14 @@ body > div {
 }
 
 #side_nav > a {
-    background-color: var(--background-color);
-    border-top: 3px solid aliceblue;
+    background-color: Orchid;
+    border-top: 3px solid Orchid;
     border-bottom: 3px solid RebeccaPurple;
-    color: Violet;
+    color: white;
     display: grid;
     font-size: 22px;
-    height: 75px;
+    font-weight: bold;
+    height: 80px;
     place-content: center left;
     text-indent: 15px;
     width: 100%;
@@ -250,7 +250,9 @@ body > div {
 }
 
 #main_panel {
+    font-size: 20px;
     grid-area: main_panel;
+    padding: 5px;
 }
 
 #right_panel {
@@ -279,7 +281,20 @@ body > div {
 
 #footer {
     background-color: Orchid;
+    color: white;
+    display: grid;
+    gap: 100px;
     grid-area: footer;
+    grid-auto-flow: column;
+    place-content: center;
+}
+
+.footer_item {
+    display: grid;
+    gap: 5px;
+}
+.footer_item_heading {
+    font-weight: bold;
 }
 
 @media screen and (max-width: 2000px) {
