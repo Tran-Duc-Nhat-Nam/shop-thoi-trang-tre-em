@@ -17,9 +17,10 @@ a {
 
 body {
     background-image: linear-gradient(to bottom right, DeepPink, RebeccaPurple, MidnightBlue);
+    background-size: 120vw 120vh;
     display: grid;
     font-family: sans-serif;
-    gap: 25px;
+    gap: 35px;
     grid-template-areas: 
     "header header header header header" 
     "banner banner banner banner banner " 
@@ -27,12 +28,12 @@ body {
     ". side_nav slide_show slide_show . " 
     ". side_nav main_panel right_panel . "  
     "footer footer footer footer footer" ;
-    grid-template-columns: 1fr 300px 1000px 600px 1fr;
+    grid-template-columns: 1fr 300px 900px 600px 1fr;
     grid-template-rows: 75px 120px 50px 2fr 12fr 80px;
-    height: 99vh;
+    height: 100vh;
     overflow: hidden;
-    padding: 0px 25px;
-    width: calc(96vw - 25px);
+    padding: 5px 25px;
+    width: calc(98.5vw - 25px);
 }
 
 body > div {
@@ -261,10 +262,19 @@ body > div {
     grid-template-rows: 1fr 1fr;
 }
 
-#right_panel div {
+#right_panel > div {
     border: 1px solid black;
     display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
     place-content: center;
+    text-align: center;
+}
+
+.item_img {
+    height: 210px;
+    margin: auto;
+    width: 140px;
 }
 
 #footer {
@@ -277,6 +287,7 @@ body > div {
         background-image: linear-gradient(to bottom right, DeepPink, RebeccaPurple, MidnightBlue);
         display: grid;
         font-family: sans-serif;
+        gap: 25px;
         grid-template-areas: 
         "header header header" 
         "banner banner banner" 
@@ -288,7 +299,6 @@ body > div {
         grid-template-rows: 75px 100px 50px 2fr 12fr 80px;
         height: 99vh;
         overflow: hidden;
-        width: 99.25vw;
     }
 
     #header {
@@ -318,6 +328,23 @@ body > div {
 }
 
 @media screen and (max-width: 1080px) {
+    body {
+        background-image: linear-gradient(to bottom right, DeepPink, RebeccaPurple, MidnightBlue);
+        display: grid;
+        font-family: sans-serif;
+        gap: 25px;
+        grid-template-areas: 
+        "header header header" 
+        "top_nav top_nav top_nav" 
+        "slide_show slide_show right_panel" 
+        "main_panel main_panel right_panel"  
+        "footer footer footer" ;
+        grid-template-columns: 6fr 2fr 4fr;
+        grid-template-rows: 75px 50px 2fr 12fr 80px;
+        height: 99vh;
+        overflow: hidden;
+    }
+
     #right_panel {
     grid-area: right_panel;
     grid-template-areas: 
@@ -327,11 +354,21 @@ body > div {
     "item_4" ;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-}
+    }
+
+    #banner {
+        display: none;
+    }
+
+    .item_img {
+        height: 180px;
+        width: 120px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     body {
+        gap: 10px;
         grid-template-areas: 
         "header header header header header" 
         "top_nav top_nav top_nav top_nav top_nav" 
@@ -340,9 +377,10 @@ body > div {
         "right_panel right_panel right_panel right_panel right_panel" 
         "footer footer footer footer footer" ;
         grid-template-columns: 1fr 2fr 7fr 3fr 3fr;
-        grid-template-rows: 50px 35px 80px 8fr 4fr 80px;
+        grid-template-rows: 50px 50px 80px 8fr 4fr 80px;
         height: 100vh;
-        width: 96vw;
+        padding: 0px 15px;
+        width: calc(93.5vw - 15px);
     }
 
     #header {
@@ -395,10 +433,6 @@ body > div {
         width: 120px;
     }
 
-    #banner {
-        display: none;
-    }
-
     #top_nav {
         gap: 15px;
         font-size: 12px;
@@ -421,5 +455,15 @@ body > div {
         "item_3 item_4" ;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    #right_panel > div {
+        grid-auto-flow: column;
+        grid-template-rows: 1fr;
+    }
+
+    .item_img {
+        height: 9vh;
+        width: 6vw;
     }
 }
