@@ -100,7 +100,6 @@ body > div {
 #search_area {
     border: none;
     border-radius: 15px;
-    caret-color: transparent;
     float: left;
     font-size: 15px;
     height: 65%;
@@ -262,16 +261,28 @@ body > div {
 #main_panel {
     font-size: 20px;
     grid-area: main_panel;
+    grid-template-columns: 1fr;
     padding: 5px;
+    place-content: start center;
 }
 
-#main_panel > div {
+.main_section {
     border: 1px solid black;
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr;
-    place-content: center;
-    text-align: center;
+    grid-template-rows: 50px 1fr;
+    height: 500px;
+    place-content: start center;
+}
+
+.main_section_content {
+    border: 1px solid black;
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    place-content: center left;
 }
 
 #right_panel {
