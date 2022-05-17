@@ -1,6 +1,8 @@
 :root {
-    --border-radius: 5px;
+    --border-radius: 10px;
     --background-color: white;
+    --foreground-color: black;
+    --layout-color: violet;
     --box-shadow: 2px 2px 6px rgb(88, 88, 88);
     --invert: 1;
 }
@@ -8,7 +10,7 @@
 a {
     border: none;
     display: grid;
-    height: 80%;
+    height: 50%;
     margin: auto;
     outline: none;
     place-content: center;
@@ -16,11 +18,11 @@ a {
 }
 
 body {
-    background-image: linear-gradient(to bottom right, DeepPink, RebeccaPurple, MidnightBlue);
-    background-size: 120vw 120vh;
+    background-color: #f8ceec;
+    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 50%);
     display: grid;
     font-family: sans-serif;
-    gap: 35px;
+    gap: 25px;
     grid-template-areas: 
     "header header header header header" 
     "banner banner banner banner banner " 
@@ -28,10 +30,10 @@ body {
     ". side_nav slide_show slide_show . " 
     ". side_nav main_panel right_panel . "  
     "footer footer footer footer footer" ;
-    grid-template-columns: 1fr 300px 1000px 500px 1fr;
-    grid-template-rows: 75px 120px 50px 100px 1fr 150px;
-    height: 99.5vh;
-    overflow: hidden;
+    grid-template-columns: 1fr 250px 1000px 500px 1fr;
+    grid-template-rows: 60px 100px 40px 100px 1fr 150px;
+    height: 199.5vh;
+    overflow: auto;
     padding: 5px 25px;
 }
 
@@ -45,12 +47,12 @@ body > div {
 }
 
 #header {
-    background-color: Indigo;
+    background-color: DarkViolet;
     display: grid;
     grid-area: header;
     grid-template-areas: 
     "logo search_bar search_bar b";
-    grid-template-columns: 2.5fr 200px 6fr 400px;
+    grid-template-columns: 400px 200px 1fr 300px;
     grid-template-rows: 1fr;
     place-content: center left;
     width: 100%;
@@ -65,13 +67,13 @@ body > div {
 
 #logo {
     filter: invert(var(--invert));
-    height: 65px;
+    height: 45px;
     margin: auto 10px;
 }
 
 #brand {
     color: deepskyblue;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bolder;
     width: max-content;
 }
@@ -83,23 +85,25 @@ body > div {
     display: grid;
     grid-area: search_bar;
     grid-template-columns: 1fr 35px;
-    height: 35px;
+    height: 35%;
     margin: auto 20px;
     opacity: 0.5;
     transition: opacity 0.35s, width 0.35s;
-    width: 40%;
+    width: 20%;
 }
 
 #search_bar:focus-within {
     opacity: 1;
-    width: 80%;
+    width: 60%;
 }
 
 #search_area {
     border: none;
     border-radius: 15px;
+    caret-color: transparent;
     float: left;
-    font-size: 20px;
+    font-size: 15px;
+    height: 65%;
     outline: none;
     padding-top: 5px;
     text-indent: 10px;
@@ -122,7 +126,7 @@ body > div {
 
 #b_section {
     display: grid;
-    gap: 25px;
+    gap: 15px;
     grid-template-rows: 1fr;
     grid-auto-flow: column;
     place-content: center;
@@ -131,9 +135,9 @@ body > div {
 #b_section > a {
     border-radius: 25px;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    width: 150px;
+    width: 125px;
 }
 
 #signup_button {
@@ -152,18 +156,24 @@ body > div {
 }
 
 #top_nav {
-    background-color: Orchid;
+    background-color: var(--layout-color);
     font-size: 20px;
     font-weight: bold;
-    gap: 50px;
     grid-area: top_nav;
     grid-auto-flow: column;
+    grid-template-rows: 1fr;
     padding-left: 25px;
     place-content: center left;
 }
 
 #top_nav > a {
     color: white;
+    height: 100%;
+    padding: 0px 50px;
+}
+
+#top_nav > a:hover {
+    background-color: DeepPink;
 }
 
 #slide_show {
@@ -180,7 +190,7 @@ body > div {
     place-content: center;
     position: absolute;
     text-align: center;
-    transition: opacity 0.5s;
+    transition: opacity 0.35s;
     width: 100%;
 }
 
@@ -219,28 +229,28 @@ body > div {
 }
 
 #side_nav {
-    background-color: indigo;
+    background-color: DarkViolet;
     grid-area: side_nav;
     grid-template-columns: 1fr;
     place-content: start;
 }
 
 #side_nav > a {
-    background-color: Orchid;
-    border-top: 3px solid Orchid;
-    border-bottom: 3px solid RebeccaPurple;
+    background-color: var(--layout-color);
+    border-top: 3px solid var(--layout-color);
+    border-bottom: 3px solid DarkViolet;
     color: white;
     display: grid;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     height: 80px;
     place-content: center left;
-    text-indent: 15px;
+    text-indent: 10px;
     width: 100%;
 }
 
 #side_nav > a:hover {
-    border: 3px solid Indigo;
+    border: 3px solid DarkViolet;
     transform: translate(-5px, -5px);
 }
 
@@ -255,13 +265,22 @@ body > div {
     padding: 5px;
 }
 
+#main_panel > div {
+    border: 1px solid black;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    place-content: center;
+    text-align: center;
+}
+
 #right_panel {
     grid-area: right_panel;
     grid-template-areas: 
-    "item_1 item_2" 
-    "item_3 item_4" ;
+    "right_header right_header";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 35px;
+    place-content: start center;
 }
 
 #right_panel > div {
@@ -273,6 +292,14 @@ body > div {
     text-align: center;
 }
 
+#right_header {
+    grid-area: right_header;
+}
+
+.item {
+    height: 300px;
+}
+
 .item_img {
     height: 210px;
     margin: auto;
@@ -280,7 +307,7 @@ body > div {
 }
 
 #footer {
-    background-color: Orchid;
+    background-color: var(--layout-color);
     color: white;
     display: grid;
     gap: 100px;
@@ -299,10 +326,6 @@ body > div {
 
 @media screen and (max-width: 2000px) {
     body {
-        background-image: linear-gradient(to bottom right, DeepPink, RebeccaPurple, MidnightBlue);
-        display: grid;
-        font-family: sans-serif;
-        gap: 25px;
         grid-template-areas: 
         "header header header" 
         "banner banner banner" 
@@ -313,7 +336,6 @@ body > div {
         grid-template-columns: 6fr 2fr 4fr;
         grid-template-rows: 75px 100px 50px 2fr 12fr 80px;
         height: 99vh;
-        overflow: hidden;
     }
 
     #header {
@@ -344,10 +366,6 @@ body > div {
 
 @media screen and (max-width: 1080px) {
     body {
-        background-image: linear-gradient(to bottom right, DeepPink, RebeccaPurple, MidnightBlue);
-        display: grid;
-        font-family: sans-serif;
-        gap: 25px;
         grid-template-areas: 
         "header header header" 
         "top_nav top_nav top_nav" 
@@ -357,7 +375,6 @@ body > div {
         grid-template-columns: 6fr 2fr 4fr;
         grid-template-rows: 75px 50px 2fr 12fr 80px;
         height: 99vh;
-        overflow: hidden;
     }
 
     #right_panel {
