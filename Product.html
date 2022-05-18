@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="DA-05.css" />
+    <script src="DA-05.js"></script>
+    <title>NHS Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="top_menu">
+        <div onclick="playButton('RR')" class="noselect" id="brand_logo">
+          NHS
+        </div>
+        <div id="search_area">
+          <input type="text" placeholder="Tìm kiếm" id="search_bar" />
+          <button id="search_button"></button>
+        </div>
+        <div>
+          <button onclick="openHTML('DA-05-Login')" id="login_button">
+            ĐĂNG NHẬP
+          </button>
+          <button onclick="openHTML('DA-05-Signin')" id="signin_button">
+            ĐĂNG KÝ
+          </button>
+        </div>
+      </div>
+      <div class="noselect" id="banner">
+        <div id="banner_text">Shop thời trang trẻ em Nam Hào San</div>
+        <div id="strip_line"></div>
+        <div id="banner_descripsion">
+          Một hãng thời trang sẽ phá sản trong một tương lai gần
+        </div>
+      </div>
+      <div id="top_navigation_area">
+        <nav id="top_navigation_bar">
+          <button onclick="openSideNavBar(event)" id="side_navigation_button">
+            <div class="side_nav" id="side_nav_bar">
+              <ul>
+                <li>
+                  Quần áo theo lứa tuổi
+                  <div
+                    onclick="openSubSideNavBar(this)"
+                    class="sub side_nav"
+                    id="sub_nav_bar_1"
+                  >
+                    <ul>
+                      <li>
+                        Trẻ em từ 0 - 3 tuổi
+                        <div
+                          onclick="openSubSideNavBar(this)"
+                          class="sub side_nav"
+                          id="sub_nav_bar_2"
+                        >
+                          <ul>
+                            <li>Trẻ em từ 0 - 3 tuổi</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>Quần áo theo mức giá</li>
+                <li>Quần áo theo mùa</li>
+                <li>Quần áo theo chất liệu</li>
+                <li>Quần áo second-hand</li>
+                <li>Phụ kiện</li>
+              </ul>
+            </div>
+          </button>
+          <a href="#">Trang chủ</a>
+          <a href="#">Giới thiệu</a>
+          <a href="#">Khuyến mãi</a>
+          <a href="#">Sự kiện</a>
+          <a href="#">Xu hướng</a>
+          <a href="#">Hình ảnh</a>
+          <a href="#">Forum</a>
+          <a href="#">Góp ý</a>
+        </nav>
+      </div>
+      <div>
+        <div id="info_banner_area">
+          <div class="noselect info_banner" id="ib_1">
+            <div class="info_banner_text">
+              Khuyến mãi 14/2: Giảm giá 50% cho các cặp đôi mới cưới
+            </div>
+            <div class="info_banner" id="ib_2">
+              <div class="info_banner_text">
+                Khuyến mãi 6/1: Giảm giá 25% cho thành viên
+              </div>
+            </div>
+            <div class="info_banner" id="ib_3">
+              <div class="info_banner_text">
+                Khuyến mãi 2/9: Sale off 66% cho trẻ lớp 1
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="info_banner_selector">
+          <button onclick="moveBanner(2350, this)" class="selector"></button>
+          <button
+            onclick="moveBanner(0, this)"
+            class="selector"
+            id="default_selector"
+          ></button>
+          <button onclick="moveBanner(-2350, this)" class="selector"></button>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="main_container">
+        sadadasd
+      </div>
+      <div id="right_container">
+        <div class="xep">
+          <div>
+            <p>Tops con trai Ô tô/xe hơi Lá thư Giải trí</p>
+          </div>
+          <h1><span class="badge rounded-pill text-bg-danger">Mới</span></h1>
+          <div class="payments">
+            <p>100.548đ</p>
+          </div>
+            <p>Kích thước</p>
+          <div class="flex-container">
+            <button type="button" class="btn btn-outline-primary"  data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 33 cm Chiều dài: 50 cm Chiều dài tay: 16 cm Ngực: 80 cm Cổ tay áo: 27.5 cm" data-cooltipz-size="medium" >8Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 34.2 cm Chiều dài: 52 cm Chiều dài tay: 16.5 cm Ngực: 83 cm Cổ tay áo: 28.3 cm" data-cooltipz-size="large">9Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 35.4 cm Chiều dài: 54 cm Chiều dài tay: 17 cm Ngực: 86 cm Cổ tay áo: 29.1 cm" data-cooltipz-size="large">10Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 37.8 cm Chiều dài: 58 cm Chiều dài tay: 18 cm Ngực: 92 cm Cổ tay áo: 30.7 cm" data-cooltipz-size="large">11-12Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top-right" aria-label="Phép đo sản phẩm
+            Vai: 40.2 cm Chiều dài: 62 cm Chiều dài tay: 19 cm Ngực: 98 cm Cổ tay áo: 32.3 cm" data-cooltipz-size="large">13-14Y</button>
+          </div>
+          <div class="giohang">
+            <button type="button" class="btn btn-dark btn-lg">Thêm vào giỏ hàng</button>
+        </div>
+        <div id="myDIV">
+          See what different box-sizing values does for an element
+          </div>
+          </div>
+        </div>
+            </div>
+          </div>    
+          </div>
+      </div>
+    </div>
+    <div id="footer">
+      <audio style="display: none" controls id="RR">
+        <source src="../Shared Resources/RR.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
