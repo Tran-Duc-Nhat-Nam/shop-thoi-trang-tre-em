@@ -198,6 +198,7 @@ body > div {
     place-content: center left;
     position: sticky;
     top: 70px;
+    z-index: 1000;
 }
 
 #top_nav > a {

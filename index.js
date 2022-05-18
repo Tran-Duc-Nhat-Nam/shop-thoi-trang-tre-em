@@ -41,6 +41,6 @@ function moveBanner(number, button) {
 }
 
 function fade() {
-  let e = document.getElementsByTagName[0];
+  let e = document.getElementById('bd')
   e.style.opacity = 1;
 }
