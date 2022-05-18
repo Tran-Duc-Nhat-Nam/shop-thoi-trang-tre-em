@@ -1,3 +1,4 @@
+
 function darkMode()
 {
     if (window.getComputedStyle(document.documentElement).getPropertyValue("--theme-color") != "#000000")
@@ -39,12 +40,7 @@ function moveBanner(number, button) {
   button.style.opacity = 1;
 }
 
-function isFullscreen() {
-  if (!window.screenTop && !window.screenY) {
-    var a = document.getElementsByTagName("body")[0]
-      var h = window.innerHeight - 18;
-      a.style.height = h + "px";
-      a.style.width = (2 * h) + "px";
-      //alert((window.innerHeight - 18) + "x" + (window.innerWidth))
-  }
+function fade() {
+  let e = document.getElementsByTagName[0];
+  e.style.opacity = 1;
 }

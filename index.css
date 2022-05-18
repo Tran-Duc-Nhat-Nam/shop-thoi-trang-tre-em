@@ -3,7 +3,7 @@
     --background-color: white;
     --foreground-color: black;
     --layout-color: violet;
-    --box-shadow: 2px 2px 6px rgb(88, 88, 88);
+    --box-shadow: 2px 2px 8px rgb(88, 88, 88);
     --invert: 1;
 }
 
@@ -30,11 +30,13 @@ body {
     "side_nav . main_panel right_panel . " 
     ". . main_panel right_panel . "  
     "footer footer footer footer footer" ;
-    grid-template-columns: 250px 100px 1000px 500px 1fr;
+    grid-template-columns: 250px 200px 1000px 600px 1fr;
     grid-template-rows: 60px 100px 40px 100px 700px 1fr 150px;
     height: 199.5vh;
+    opacity: 0;
     overflow: auto;
     padding: 5px 25px;
+    transition: opacity 0.5s;
 }
 
 body > div {
@@ -56,7 +58,7 @@ body > div {
     grid-template-rows: 1fr;
     place-content: center left;
     position: sticky;
-    top: 0px;
+    top: 5px;
     width: 100%;
     z-index: 9988;
 }
@@ -75,7 +77,7 @@ body > div {
 }
 
 #brand {
-    color: deepskyblue;
+    color: aqua;
     font-size: 22px;
     font-weight: bolder;
     width: max-content;
@@ -88,7 +90,7 @@ body > div {
     display: grid;
     grid-area: search_bar;
     grid-template-columns: 1fr 35px;
-    height: 35%;
+    height: 40%;
     margin: auto 20px;
     opacity: 0.5;
     transition: opacity 0.35s, width 0.35s;
@@ -156,15 +158,32 @@ body > div {
     width: 125px;
 }
 
+#signup_button:hover {
+    background-color: hotpink;
+}
+
+#signup_button:active {
+    background-color: deeppink;
+}
+
 #login_button {
-    background-color: slateblue;
+    background-color: mediumslateblue;
     width: 125px;
+}
+
+#login_button:hover {
+    background-color: slateblue;
+}
+
+#login_button:active {
+    background-color: midnightblue;
 }
 
 #banner {
     background-image: url(./Wide\ Blue\ Sky.jpg);
     color: white;
     font-size: 50px;
+    font-weight: bold;
     grid-area: banner;
 }
 
@@ -178,7 +197,7 @@ body > div {
     padding-left: 25px;
     place-content: center left;
     position: sticky;
-    top: 60px;
+    top: 70px;
 }
 
 #top_nav > a {
@@ -188,7 +207,7 @@ body > div {
 }
 
 #top_nav > a:hover {
-    background-color: DeepPink;
+    background-color: HotPink;
 }
 
 #slide_show {
@@ -207,6 +226,7 @@ body > div {
     text-align: center;
     transition: opacity 0.35s;
     width: 100%;
+    z-index: 1;
 }
 
 #slide_1 {
@@ -251,13 +271,13 @@ body > div {
     place-content: start;
     position: sticky;
     left: 0px;
-    top: 240px;
+    top: 125px;
 }
 
 #side_nav > a {
     background-color: var(--layout-color);
     border-top: 3px solid var(--layout-color);
-    border: 3px solid DarkViolet;
+    border: 2px solid DarkViolet;
     box-shadow: var(--box-shadow);
     color: white;
     display: grid;
@@ -270,21 +290,19 @@ body > div {
 }
 
 #side_nav > a:hover {
-    border: 3px solid DarkViolet;
     box-shadow: 8px 2px 12px gray;
     transform: translate(-5px, -5px);
 }
 
 #side_nav_top {
-    border-bottom: 3px solid RebeccaPurple;
     height: 50px;
 }
 
 #main_panel {
     font-size: 20px;
+    gap: 25px;
     grid-area: main_panel;
     grid-template-columns: 1fr;
-    padding: 5px;
     place-content: start center;
 }
 
@@ -292,17 +310,40 @@ body > div {
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 70px 1fr;
     height: 500px;
     place-content: start center;
 }
 
+.main_section_header {
+    border-bottom: 5px solid darkviolet;
+    color: hotpink;
+    display: grid;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 10px;
+    place-content: center left;
+    text-indent: 5px;
+}
+
 .main_section_content {
     display: grid;
-    gap: 10px;
+    gap: 25px;
     grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     place-content: center left;
+}
+
+.main_section_content_item {
+    font-size: 20px;
+    margin: 0px auto;
+    text-align: center;
+    width: 200px;
+}
+
+.main_section_content_item > img {
+    height: 300px;
 }
 
 #right_panel {
