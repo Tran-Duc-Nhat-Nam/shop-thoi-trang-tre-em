@@ -1,25 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup.css">
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="signup.css" />
+    <script src="index.js"></script>
     <script src="signup.js"></script>
-    <title>Document</title>
-</head>
-<body onload="floatOn()" id="bd">
-    <form id="main">
-        <div>Nhập tài khoản</div>
-        <input type="text">
-        <div>Nhập email</div>
-        <input type="email">
-        <div>Nhập mật khẩu</div>
-        <input type="password">
-        <div>Xác nhận lại mật khẩu</div>
-        <input type="password">
-        <div onclick="login()" class="button noselect">Đăng ký</div>
-        <div onclick="darkMode()" class="button noselect" id="login">Đã có tài khoản? Đăng nhập</div>
+    <title>SCP Shop</title>
+  </head>
+  <body onload="fade()" id="bd">
+    <div id="header">
+      <div id="brand_logo">
+        <img src="./SCP-Logo.png" alt="Logo" id="logo" />
+        <p id="brand">Sincere, Comfortable, Perfect</p>
+      </div>
+      <div id="search_bar">
+        <input type="text" placeholder="Tìm kiếm..." id="search_area" />
+        <button id="search_button"></button>
+      </div>
+      <div id="b_section">
+        <a href="cart.html" id="cart_button"
+          ><img src="./Cart-Icon.png" id="cart_button_img"
+        /></a>
+        <a href="signup.html" id="signup_button">ĐĂNG KÝ</a>
+        <a href="signup.html" id="login_button">ĐĂNG NHẬP</a>
+      </div>
+    </div>
+    <div id="banner">
+      SCP - Sincere, Comfortable, Perfect - Chân thành, thoải mái, hoàn hảo
+    </div>
+    <div class="expand" id="top_nav">
+      <a href="index.html" class="top_nav_link">Trang chủ</a>
+      <a href="about.html" class="top_nav_link">Giới thiệu</a>
+      <a href="about.html" class="top_nav_link">Sự kiện</a>
+      <a href="about.html" class="top_nav_link">Khuyến mãi</a>
+      <a href="Product.html" class="top_nav_link">Sản phẩm</a>
+      <a href="about.html" class="top_nav_link">Dịch vụ</a>
+      <a href="signup.html" class="top_nav_link" id="current">Thành viên</a>
+    </div>
+    <div id="side_nav">
+      <a href="category.html">Thời trang trẻ em nam</a>
+      <a href="category.html">Thời trang trẻ em nữ</a>
+      <a href="category.html">Thời trang trẻ em </a>
+      <a href="category.html">Phụ kiện thời trang nam</a>
+      <a href="category.html">Phụ kiện thời trang nữ</a>
+      <a href="category.html">Phụ kiện thời trang</a>
+    </div>
+    <form id="main_form">
+      <div class="text">Nhập tài khoản</div>
+      <input type="text" class="text_input" />
+      <div class="text">Nhập email</div>
+      <input type="email" class="text_input" />
+      <div class="text">Nhập mật khẩu</div>
+      <input type="password" class="text_input" />
+      <div class="text">Xác nhận lại mật khẩu</div>
+      <input type="password" class="text_input" />
+      <div onclick="login()" class="button noselect">Đăng ký</div>
+      <div onclick="darkMode()" class="button noselect" id="login">
+        Đã có tài khoản? Đăng nhập
+      </div>
     </form>
-</body>
+    <div id="footer">
+      <div class="footer_item">
+        <div class="footer_item_heading">
+          Công ty TNHH Marshall, Carter và Dark
+        </div>
+        <div class="footer_item_text">
+          Địa chỉ trụ sở: 420/69 Ngụy Như Kon Tum, Phường 13, Thành phố Thủ Đức,
+          Thành phố Hồ Chí Minh
+        </div>
+        <div class="footer_item_text">SĐT: 0366764749</div>
+        <div class="footer_item_text">Email: TenBrotherHao@scp.com</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Về SCP Shop</div>
+        <div class="footer_item_text">Giới thiệu về shop</div>
+        <div class="footer_item_text">Chính sách hoạt động</div>
+        <div class="footer_item_text">Tuyển dụng nhân viên</div>
+        <div class="footer_item_text">Chăm sóc khách hàng</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Liên hệ</div>
+        <div class="footer_item_text">Giới thiệu về shop</div>
+        <div class="footer_item_text">Chính sách hoạt động</div>
+        <div class="footer_item_text">Tuyển dụng nhân viên</div>
+        <div class="footer_item_text">Chăm sóc khách hàng</div>
+      </div>
+    </div>
+  </body>
 </html>
