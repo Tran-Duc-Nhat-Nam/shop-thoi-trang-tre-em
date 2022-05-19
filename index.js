@@ -1,20 +1,21 @@
+function darkMode() {
+  let body = document.getElementById('bd');
+  let form = document.getElementById('main_form');
 
-function darkMode()
-{
-    if (window.getComputedStyle(document.documentElement).getPropertyValue("--theme-color") != "#000000")
-    {
-        document.documentElement.style.setProperty('--theme-color', '#000000')
-        document.documentElement.style.setProperty('--content-background-color', '#323232')
-        document.documentElement.style.setProperty('--content-foreground-color', '#ffffff')
-        document.documentElement.style.setProperty('--content-border-color', '#ffffff')
-    }
-    else
-    {
-        document.documentElement.style.setProperty('--theme-color', '#afeeee')
-        document.documentElement.style.setProperty('--content-background-color', '#ffffff')
-        document.documentElement.style.setProperty('--content-foreground-color', '#000000')
-        document.documentElement.style.setProperty('--content-border-color', '#000000')
-    }
+  if (dark)
+  {
+      body.style.backgroundImage = 'linear-gradient(115deg, pink, skyblue)';
+      body.style.backgroundColor = 'white';
+      form.style.boxShadow = '6px 6px 15px gray';
+      dark = false;
+  }
+  else 
+  {
+      body.style.backgroundImage = 'none';
+      body.style.backgroundColor = 'black';
+      form.style.boxShadow = 'none';
+      dark = true;
+  }
 }
 
 function moveBanner(number, button) {
@@ -34,7 +35,7 @@ function moveBanner(number, button) {
       .getComputedStyle(element)
       .getPropertyValue("opacity");
     if (o == 1) {
-      element.style.opacity = 0.35;
+      element.style.opacity = 0.5;
     }
   });
   button.style.opacity = 1;

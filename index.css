@@ -1,9 +1,9 @@
 :root {
-    --border-radius: 10px;
-    --background-color: white;
+    --border-radius: 5px;
+    --background-color: rgb(255, 255, 255, 0.75);
     --foreground-color: black;
     --layout-color: violet;
-    --box-shadow: 2px 2px 8px rgb(88, 88, 88);
+    --box-shadow: 1px 1px 5px rgb(88, 88, 88);
     --invert: 1;
 }
 
@@ -18,7 +18,7 @@ a {
 }
 
 body {
-    background-image: linear-gradient(115deg, pink, skyblue);
+    background-image: linear-gradient(115deg, MistyRose, MintCream);
     display: grid;
     font-family: sans-serif;
     gap: 25px;
@@ -26,16 +26,17 @@ body {
     "header header header header header" 
     "banner banner banner banner banner " 
     "top_nav top_nav top_nav top_nav top_nav " 
-    "slide_show slide_show slide_show slide_show slide_show " 
-    "side_nav . main_panel right_panel . " 
-    ". . main_panel right_panel . "  
+    ". slide_show slide_show slide_show . " 
+    "side_nav main_panel main_panel right_panel . " 
+    ". main_panel main_panel right_panel . "  
     "footer footer footer footer footer" ;
-    grid-template-columns: 250px 200px 1000px 600px 1fr;
-    grid-template-rows: 60px 100px 40px 100px 700px 1fr 150px;
+    grid-template-columns: 300px 500px 800px 600px 300px;
+    grid-template-rows: 75px 500px 50px 400px 700px 1fr 150px;
     height: 199.5vh;
     opacity: 0;
     overflow: auto;
-    padding: 5px 25px;
+    padding: 0px;
+    margin: 0px;
     transition: opacity 0.5s;
 }
 
@@ -49,16 +50,17 @@ body > div {
 }
 
 #header {
-    background-image: linear-gradient(90deg, DarkViolet, RebeccaPurple);
+    background-image: linear-gradient(90deg, dodgerblue, darkviolet);
+    box-shadow: none;
     display: grid;
     grid-area: header;
     grid-template-areas: 
     "logo search_bar search_bar b";
-    grid-template-columns: 400px 200px 1fr 400px;
+    grid-template-columns: 400px 200px 1fr 500px;
     grid-template-rows: 1fr;
     place-content: center left;
     position: sticky;
-    top: 5px;
+    top: 0px;
     width: 100%;
     z-index: 9988;
 }
@@ -84,7 +86,7 @@ body > div {
 }
 
 #search_bar {
-    background-color: var(--background-color);
+    background-color: white;
     border: 1px solid gray;
     border-radius: 15px;
     display: grid;
@@ -137,14 +139,15 @@ body > div {
 }
 
 #b_section > a {
-    border-radius: 25px;
     color: white;
-    font-size: 15px;
+    height: 100%;
+    font-size: 20px;
     font-weight: bold;
+    
 }
 
 #cart_button {
-    margin: auto 15px;
+    margin: auto;
     width: 35px;
 }
 
@@ -155,7 +158,7 @@ body > div {
 
 #signup_button {
     background-color: violet;
-    width: 125px;
+    width: 150px;
 }
 
 #signup_button:hover {
@@ -168,7 +171,7 @@ body > div {
 
 #login_button {
     background-color: mediumslateblue;
-    width: 125px;
+    width: 150px;
 }
 
 #login_button:hover {
@@ -181,6 +184,7 @@ body > div {
 
 #banner {
     background-image: url(./Wide\ Blue\ Sky.jpg);
+    box-shadow: none;
     color: white;
     font-size: 50px;
     font-weight: bold;
@@ -188,7 +192,8 @@ body > div {
 }
 
 #top_nav {
-    background-color: var(--layout-color);
+    background-image: linear-gradient(90deg, deepskyblue, violet);
+    box-shadow: none;
     font-size: 20px;
     font-weight: bold;
     grid-area: top_nav;
@@ -197,7 +202,7 @@ body > div {
     padding-left: 25px;
     place-content: center left;
     position: sticky;
-    top: 70px;
+    top: 75px;
     z-index: 1000;
 }
 
@@ -220,7 +225,10 @@ body > div {
 
 #slide_show {
     font-size: 35px;
+    display: grid;
     grid-area: slide_show;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     position: relative;
     text-indent: 0px;
 }
@@ -229,6 +237,7 @@ body > div {
     border-radius: var(--border-radius);
     display: grid;
     height: 100%;
+    object-fit: none;
     place-content: center;
     position: absolute;
     text-align: center;
@@ -238,7 +247,7 @@ body > div {
 }
 
 #slide_1 {
-    background-color: crimson;
+    object-position: 0px -150px;
     opacity: 0;
 }
 
@@ -264,11 +273,12 @@ body > div {
 }
 
 .option {
-    background-color: deepskyblue;
+    background-color: white;
+    border: 1px solid gray;
     border-radius: 50%;
-    height: 15px;
-    opacity: 0.35;
-    width: 15px;
+    height: 20px;
+    opacity: 0.5;
+    width: 20px;
 }
 
 #side_nav {
@@ -283,24 +293,21 @@ body > div {
 }
 
 #side_nav > a {
-    background-color: var(--layout-color);
-    border-top: 3px solid var(--layout-color);
-    border: 2px solid DarkViolet;
+    background-color: var(--background-color);
     box-shadow: var(--box-shadow);
-    color: white;
+    color: black;
     display: grid;
     font-size: 18px;
     font-weight: bold;
     height: 80px;
     place-content: center left;
     text-indent: 10px;
-    transition: transform 0.1s, box-shadow 0.1s;
+    transition: transform 0.15s;
     width: 100%;
 }
 
 #side_nav > a:hover {
-    box-shadow: 8px 2px 12px gray;
-    transform: translate(-5px, -5px);
+    transform: translateX(15px);
 }
 
 #side_nav_top {
@@ -392,7 +399,7 @@ body > div {
 
 
 #footer {
-    background-color: var(--layout-color);
+    background-image: linear-gradient(90deg, dodgerblue, darkviolet);
     color: white;
     display: grid;
     gap: 100px;

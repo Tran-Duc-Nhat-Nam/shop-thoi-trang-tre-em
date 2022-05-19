@@ -14,20 +14,19 @@
 body {
     grid-template-areas: 
     "header header header header header" 
-    "banner banner banner banner banner " 
     "top_nav top_nav top_nav top_nav top_nav " 
     "side_nav . main_panel . . " 
     ". . main_panel . ."
     "footer footer footer footer footer" ;
-    grid-template-columns: 250px 1fr 1000px 1fr 250px;
-    grid-template-rows: 60px 100px 40px 700px 1fr 150px;
+    grid-template-columns: 300px 500px 800px 600px 300px;
+    grid-template-rows: 75px 50px 700px 1fr 150px;
     height: 98vh;
 }
 
 #main_form {
     background-image: linear-gradient(115deg ,deepskyblue, HotPink);
-    border-radius: 15px;
-    box-shadow: 6px 6px 15px gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px gray;
     display: grid;
     grid-area: main_panel;
     grid-template-columns: 1fr;
@@ -48,10 +47,9 @@ body {
 
 .text_input {
     border: none;
-    border-radius: 15px;
-    box-shadow: 3px 3px 9px gray;
-    font-size: 15px;
-    height: 25px;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 30px;
     margin: auto;
     opacity: 0.65;
     text-indent: 10px;
