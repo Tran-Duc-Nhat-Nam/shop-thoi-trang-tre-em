@@ -38,27 +38,39 @@
       <a href="about.html" class="top_nav_link">Dịch vụ</a>
       <a href="signup.html" class="top_nav_link" id="current">Thành viên</a>
     </div>
-    <div id="side_nav">
-      <a href="category.html">Thời trang trẻ em nam</a>
-      <a href="category.html">Thời trang trẻ em nữ</a>
-      <a href="category.html">Thời trang trẻ em </a>
-      <a href="category.html">Phụ kiện thời trang nam</a>
-      <a href="category.html">Phụ kiện thời trang nữ</a>
-      <a href="category.html">Phụ kiện thời trang</a>
-    </div>
     <form id="main_form">
-      <div class="text">Nhập tài khoản</div>
-      <input type="text" class="text_input" />
-      <div class="text">Nhập email</div>
-      <input type="email" class="text_input" />
-      <div class="text">Nhập mật khẩu</div>
-      <input type="password" class="text_input" />
-      <div class="text">Xác nhận lại mật khẩu</div>
-      <input type="password" class="text_input" />
-      <div onclick="login()" class="button noselect">Đăng ký</div>
-      <div onclick="darkMode()" class="button noselect" id="login">
-        Đã có tài khoản? Đăng nhập
+      <div class="main_form_header">Đăng kí</div>
+      <input type="text" placeholder="Nhập tài khoản" class="text_input" />
+      <input type="email" placeholder="Nhập email" class="text_input" />
+      <input type="password" placeholder="Nhập mật khẩu" class="text_input" />
+      <input
+        type="password"
+        placeholder="Nhập lại mật khẩu"
+        class="text_input"
+      />
+      <input type="text" placeholder="Nhập họ tên" class="text_input" />
+      <input
+        type="text"
+        placeholder="Nhập ngày sinh"
+        onfocus="(this.type='date')"
+        onfocusout="(this.type='text')"
+        id="date_input"
+      />
+      <input type="text" placeholder="Nhập địa chỉ" class="text_input" />
+      <input type="text" placeholder="Nhập số điện thoại" class="text_input" />
+      <div class="checkbox_area" id="policy_checkbox_area">
+        <input type="checkbox" />
+        <div>Tôi chấp nhận chính sách thành viên</div>
       </div>
+      <div onclick="login()" class="button noselect" id="sup_button">
+        Đăng ký
+      </div>
+    </form>
+    <form id="second_form">
+      <div class="second_form_header">Đăng nhập</div>
+      <input type="text" placeholder="Nhập tài khoản" class="text_input" />
+      <input type="password" placeholder="Nhập mật khẩu" class="text_input" />
+      <div onclick="login()" class="button noselect">Đăng nhập</div>
     </form>
     <div id="footer">
       <div class="footer_item">

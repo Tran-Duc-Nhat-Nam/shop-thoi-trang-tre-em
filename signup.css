@@ -1,5 +1,5 @@
 :root {
-    --bgColor: white;
+    --bgColor: rgb(255, 255, 255, 0.75);
 }
 
 .noselect, div {
@@ -12,74 +12,145 @@
 }
 
 body {
+    gap: 0px;
     grid-template-areas: 
     "header header header header header" 
     "top_nav top_nav top_nav top_nav top_nav " 
-    "side_nav . main_panel . . " 
-    ". . main_panel . ."
+    ". . . . ."
+    ". main_panel . second_form ."
+    ". . . . ."
     "footer footer footer footer footer" ;
-    grid-template-columns: 300px 500px 800px 600px 240px;
-    grid-template-rows: 75px 50px 500px 1fr 300px;
-    height: 1300px;
+    grid-template-columns: 800px 600px 60px 300px 800px;
+    grid-template-rows: 75px 50px 1fr max-content 1fr 300px;
+    height: 100vh;
+}
+
+form {
+    background-color: var(--bgColor);
+    box-shadow: 1px 1px 5px gray;
+    display: grid;
+    height: max-content;
+    margin: auto;
+    padding: 25px 0px;
+    place-content: start center;
+    width: 100%;
 }
 
 #main_form {
-    background-image: linear-gradient(115deg ,deepskyblue, HotPink);
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px gray;
-    display: grid;
     grid-area: main_panel;
-    grid-template-columns: 1fr;
-    height: 80%;
-    margin: auto;
-    padding-top: 25px;
-    place-content: start center;
-    text-align: center;
-    width: 400px;
+    grid-template-areas: 
+    "main_form_header main_form_header"
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    "policy_checkbox policy_checkbox"
+    "signup_button signup_button";
+    grid-template-columns: 1fr 1fr;
 }
 
-.text {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px auto;
+#second_form {
+    grid-area: second_form;
+    grid-template-columns: 1fr;
+}
+
+.second_form_header {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.main_form_header {
+    font-size: 30px;
+    font-weight: bolder;
+    grid-area: main_form_header;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .text_input {
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    height: 30px;
-    margin: auto;
-    opacity: 0.65;
+    background-color: WhiteSmoke;
+    border: 3px solid rgb(255, 255, 255, 0);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px lightgray;
+    color: black;
+    font-size: 15px;
+    height: 40px;
+    margin: 10px auto;
+    opacity: 0.7;
     text-indent: 10px;
     transition: opacity 0.35s;
     width: 80%;
 }
 
-input:hover {
-    opacity: 0.75;
+.text_input:hover {
+    opacity: 0.85;
 }
 
-input:focus {
+.text_input:focus {
+    border: 3px solid deepskyblue;
     opacity: 1;
     outline: none;
 }
 
+#date_input {
+    background-color: WhiteSmoke;
+    border: 3px solid rgb(255, 255, 255, 0);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px lightgray;
+    font-size: 15px;
+    height: 40px;
+    margin: 10px auto;
+    opacity: 0.7;
+    padding: 1px 2px;
+    text-indent: 10px;
+    transition: opacity 0.35s;
+    width: 80%;
+}
+
+#date_input:hover {
+    opacity: 0.85;
+}
+
+#date_input:focus {
+    border: 3px solid deepskyblue;
+    opacity: 1;
+    outline: none;
+    text-indent: 5px;
+}
+
+.checkbox_area {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    margin: 15px auto;
+    place-content: center;
+    text-align: center;
+}
+
+.checkbox_area > * {
+    margin: auto;
+}
+
+#policy_checkbox_area {
+    grid-area: policy_checkbox;
+}
+
 .button {
-    background-color: dodgerblue;
+    background-image: linear-gradient(115deg, dodgerblue, fuchsia);
     border: none;
-    border-radius: 50px;
-    box-shadow: 4px 4px 12px gray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px gray;
     color: white;
     display: grid;
     font-size: 20px;
     font-weight: bolder;
     height: 40px;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 20px;
     place-content: center;
-    width: 90%;
+    width: 80%;
 }
 
 .button:hover {
@@ -89,3 +160,8 @@ input:focus {
 .button:active {
     background-color: midnightblue;
 }
+
+#sup_button {
+    grid-area: signup_button;
+}
+
