@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <title>SCP Shop</title>
   </head>
   <body onload="fade()" id="bd">
     <div id="header">
       <div id="brand_logo">
-        <img src="./SCP-Logo.png" alt="Logo" id="logo" />
+        <a href="index.html"
+          ><img src="./SCP-Logo.png" alt="Logo" id="logo"
+        /></a>
         <p id="brand">Sincere, Comfortable, Perfect</p>
       </div>
       <div id="search_bar">
@@ -28,14 +36,14 @@
     <div id="banner">
       SCP - Sincere, Comfortable, Perfect - Chân thành, thoải mái, hoàn hảo
     </div>
-    <div class="expand" id="top_nav">
+    <div id="top_nav">
       <a href="index.html" class="top_nav_link" id="current">Trang chủ</a>
       <a href="about.html" class="top_nav_link">Giới thiệu</a>
-      <a href="about.html" class="top_nav_link">Sự kiện</a>
       <a href="about.html" class="top_nav_link">Khuyến mãi</a>
       <a href="Product.html" class="top_nav_link">Sản phẩm</a>
-      <a href="about.html" class="top_nav_link">Dịch vụ</a>
-      <a href="signup.html" class="top_nav_link">Thành viên</a>
+      <a href="about.html" class="top_nav_link">Hỗ trợ</a>
+      <a href="about.html" class="top_nav_link">Chính sách</a>
+      <a href="about.html" class="top_nav_link">Tuyển dụng</a>
     </div>
     <div id="slide_show">
       <img src="./Banner-1.jpg" alt="" class="slide" id="slide_1" />
@@ -48,12 +56,12 @@
       </div>
     </div>
     <div id="side_nav">
-      <a href="category.html">Thời trang trẻ em nam</a>
-      <a href="category.html">Thời trang trẻ em nữ</a>
-      <a href="category.html">Thời trang trẻ em </a>
-      <a href="category.html">Phụ kiện thời trang nam</a>
-      <a href="category.html">Phụ kiện thời trang nữ</a>
-      <a href="category.html">Phụ kiện thời trang</a>
+      <a href="category.html">Đồ bộ</a>
+      <a href="category.html">Áo</a>
+      <a href="category.html">Đầm</a>
+      <a href="category.html">Quần</a>
+      <a href="category.html">Váy</a>
+      <a href="category.html">Phụ kiện</a>
     </div>
     <div id="main_panel">
       <div class="main_section">
@@ -82,57 +90,82 @@
         </div>
       </div>
       <div class="main_section">
-        <div class="main_section_header">msh 2</div>
+        <div class="main_section_header">Set quần áo tiêu biểu</div>
         <div class="main_section_content">
-          <div class="main_section_content_item">msci 21</div>
-          <div class="main_section_content_item">msci 22</div>
-          <div class="main_section_content_item">msci 23</div>
-          <div class="main_section_content_item">msci 24</div>
+          <div class="main_section_content_item">
+            <div>Quần sooc bé trai</div>
+            <img src="./quan-sooc-be-trai.jpg" alt="" />
+            <div>69.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div>Đầm bé gái</div>
+            <img src="./vay-be-gai.jpg" alt="" />
+            <div>420.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div>Quần sooc bé gái</div>
+            <img src="./quan-sooc-be-gai.jpg" alt="" />
+            <div>96.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div>Áo thun bé trai</div>
+            <img src="./ao-thun-be-trai.jpg" alt="" />
+            <div>365.000 vnd</div>
+          </div>
         </div>
       </div>
       <div class="main_section">
-        <div class="main_section_header">msh 3</div>
+        <div class="main_section_header">Set quần áo tiêu biểu</div>
         <div class="main_section_content">
-          <div class="main_section_content_item">msci 31</div>
-          <div class="main_section_content_item">msci 32</div>
-          <div class="main_section_content_item">msci 33</div>
-          <div class="main_section_content_item">msci 34</div>
+          <div class="main_section_content_item">
+            <div>Quần sooc bé trai</div>
+            <img src="./quan-sooc-be-trai.jpg" alt="" />
+            <div>69.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div>Đầm bé gái</div>
+            <img src="./vay-be-gai.jpg" alt="" />
+            <div>420.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div>Quần sooc bé gái</div>
+            <img src="./quan-sooc-be-gai.jpg" alt="" />
+            <div>96.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div>Áo thun bé trai</div>
+            <img src="./ao-thun-be-trai.jpg" alt="" />
+            <div>365.000 vnd</div>
+          </div>
+        </div>
+      </div>
+      <div class="main_section">
+        <div class="main_section_header">Set quần áo tiêu biểu</div>
+        <div class="main_section_content">
+          <div class="main_section_content_item">
+            <div class="main_section_content_item_name">Quần sooc bé trai</div>
+            <img src="./quan-sooc-be-trai.jpg" alt="" />
+            <div>69.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div class="main_section_content_item_name">Đầm bé gái</div>
+            <img src="./vay-be-gai.jpg" alt="" />
+            <div>420.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div class="main_section_content_item_name">Quần sooc bé gái</div>
+            <img src="./quan-sooc-be-gai.jpg" alt="" />
+            <div>96.000 vnd</div>
+          </div>
+          <div class="main_section_content_item">
+            <div class="main_section_content_item_name">Áo thun bé trai</div>
+            <img src="./ao-thun-be-trai.jpg" alt="" />
+            <div>365.000 vnd</div>
+          </div>
         </div>
       </div>
     </div>
-    <div id="right_panel">
-      <div id="right_header">Sản phẩm bán chạy nhất tháng</div>
-      <div class="item" id="item_1">
-        <img src="./Ao_Dai_Tre_Em.jpg" alt="" class="item_img" />
-        <div id="item_name">Áo dài trẻ em</div>
-        <div id="item_price">69.000.000 vnd</div>
-      </div>
-      <div class="item" id="item_2">
-        <img src="./Ao_Dai_Tre_Em.jpg" alt="" class="item_img" />
-        <div id="item_name">Áo dài trẻ em</div>
-        <div id="item_price">69.000.000 vnd</div>
-      </div>
-      <div class="item" id="item_3">
-        <img src="./Ao_Dai_Tre_Em.jpg" alt="" class="item_img" />
-        <div id="item_name">Áo dài trẻ em</div>
-        <div id="item_price">69.000.000 vnd</div>
-      </div>
-      <div class="item" id="item_4">
-        <img src="./Ao_Dai_Tre_Em.jpg" alt="" class="item_img" />
-        <div id="item_name">Áo dài trẻ em</div>
-        <div id="item_price">69.000.000 vnd</div>
-      </div>
-      <div class="item" id="item_5">
-        <img src="./Ao_Dai_Tre_Em.jpg" alt="" class="item_img" />
-        <div id="item_name">Áo dài trẻ em</div>
-        <div id="item_price">69.000.000 vnd</div>
-      </div>
-      <div class="item" id="item_6">
-        <img src="./Ao_Dai_Tre_Em.jpg" alt="" class="item_img" />
-        <div id="item_name">Áo dài trẻ em</div>
-        <div id="item_price">69.000.000 vnd</div>
-      </div>
-    </div>
+
     <div id="footer">
       <div class="footer_item">
         <div class="footer_item_heading">
