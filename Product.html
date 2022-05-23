@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <title>NHS Shop</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cooltipz-css@2.1.0/cooltipz.css" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  <script src="product.js"></script>
+</head>
+  <body>
+    <div id="header">
+      <!-- <!-- <div id="top_menu"> -->
+        <div onclick="playButton('RR')" class="noselect" id="brand_logo">
+          NHS
+        </div>
+        <div id="search_area">
+          <input type="text" placeholder="Tìm kiếm" id="search_bar" />
+          <button id="search_button"></button>
+        </div>
+        <div>
+          <button onclick="openHTML('DA-05-Login')" id="login_button">
+            ĐĂNG NHẬP
+          </button>
+          <button onclick="openHTML('DA-05-Signin')" id="signin_button">
+            ĐĂNG KÝ
+          </button>
+        </div>
+      </div>
+      <div class="noselect" id="banner">
+        <div id="banner_text">Shop thời trang trẻ em Nam Hào San</div>
+        <div id="strip_line"></div>
+        <div id="banner_descripsion">
+          SCP - Sincere, Comfortable, Perfect - Chân thành, thoải mái, hoàn hảo
+        </div>
+      </div>
+      <div id="top_navigation_area">
+        <nav id="top_navigation_bar">
+          <button onclick="openSideNavBar(event)" id="side_navigation_button">
+            <div class="side_nav" id="side_nav_bar">
+              <ul>
+                <li>
+                  Quần áo theo lứa tuổi
+                  <div
+                    onclick="openSubSideNavBar(this)"
+                    class="sub side_nav"
+                    id="sub_nav_bar_1"
+                  >
+                    <ul>
+                      <li>
+                        Trẻ em từ 0 - 3 tuổi
+                        <div
+                          onclick="openSubSideNavBar(this)"
+                          class="sub side_nav"
+                          id="sub_nav_bar_2"
+                        >
+                          <ul>
+                            <li>Trẻ em từ 0 - 3 tuổi</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>Quần áo theo mức giá</li>
+                <li>Quần áo theo mùa</li>
+                <li>Quần áo theo chất liệu</li>
+                <li>Quần áo second-hand</li>
+                <li>Phụ kiện</li>
+              </ul>
+            </div>
+          </button>
+          <a href="#">Trang chủ</a>
+          <a href="#">Giới thiệu</a>
+          <a href="#">Khuyến mãi</a>
+          <a href="#">Sự kiện</a>
+          <a href="#">Xu hướng</a>
+          <a href="#">Hình ảnh</a>
+          <a href="#">Forum</a>
+          <a href="#">Góp ý</a>
+        </nav>
+      </div>
+      <div>
+        <div id="info_banner_area">
+          <div class="noselect info_banner" id="ib_1">
+            <div class="info_banner_text">
+              Khuyến mãi 14/2: Giảm giá 50% cho các cặp đôi mới cưới
+            </div>
+            <div class="info_banner" id="ib_2">
+              <div class="info_banner_text">
+                Khuyến mãi 6/1: Giảm giá 25% cho thành viên
+              </div>
+            </div>
+            <div class="info_banner" id="ib_3">
+              <div class="info_banner_text">
+                Khuyến mãi 2/9: Sale off 66% cho trẻ lớp 1
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="info_banner_selector">
+          <button onclick="moveBanner(2350, this)" class="selector"></button>
+          <button
+            onclick="moveBanner(0, this)"
+            class="selector"
+            id="default_selector"
+          ></button>
+          <button onclick="moveBanner(-2350, this)" class="selector"></button>
+        </div>
+      </div> -->
+    
+    </div>
+    <div id="main">
+      <div id="main_container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="shirt top 1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="shirt top 2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="shirt top 3.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div id="right_container">
+        <div class="xep">
+          <div>
+            <p>Tops con trai Ô tô/xe hơi Lá thư Giải trí</p>
+          </div>
+          <h1><span class="badge rounded-pill text-bg-danger">Mới</span></h1>
+          <div class="payments">
+            <p>100.548đ</p>
+          </div>
+            <p>Kích thước</p>
+          <div class="flex-container">
+            <button type="button" class="btn btn-outline-primary"  data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 33 cm Chiều dài: 50 cm Chiều dài tay: 16 cm Ngực: 80 cm Cổ tay áo: 27.5 cm" data-cooltipz-size="medium" >8Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 34.2 cm Chiều dài: 52 cm Chiều dài tay: 16.5 cm Ngực: 83 cm Cổ tay áo: 28.3 cm" data-cooltipz-size="large">9Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 35.4 cm Chiều dài: 54 cm Chiều dài tay: 17 cm Ngực: 86 cm Cổ tay áo: 29.1 cm" data-cooltipz-size="large">10Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top" aria-label="Phép đo sản phẩm
+            Vai: 37.8 cm Chiều dài: 58 cm Chiều dài tay: 18 cm Ngực: 92 cm Cổ tay áo: 30.7 cm" data-cooltipz-size="large">11-12Y</button>
+            <button type="button" class="btn btn-outline-primary" data-cooltipz-dir="top-right" aria-label="Phép đo sản phẩm
+            Vai: 40.2 cm Chiều dài: 62 cm Chiều dài tay: 19 cm Ngực: 98 cm Cổ tay áo: 32.3 cm" data-cooltipz-size="large">13-14Y</button>
+          </div>
+          <div class="giohang">
+            <button type="button" class="btn btn-dark btn-lg" style="width:370px;" >Thêm vào giỏ hàng</button>
+            
+        </div>
+          <div class="mieuta">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <b>Miêu tả</b>
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <table class="table table-hover">
+                      <tbody>
+                         <tr>
+                           <th scope="row">Màu sắc:</th>
+                           <td></td>
+                           <td></td>
+                           <td>màu đen</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Phong cách:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Giải trí</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Kiểu mẫu:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Lá thư, Ô tô/xe hơi</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Viền:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Vòng cổ</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Chiều dài tay:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Ngắn tay</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Loại tay áo:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Tay thường</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Chiều dài:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Thường xuyên</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Loại Phù hợp:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Phù hợp thường</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Sợi vải:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Căng nhẹ</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Vật liệu:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Polyester</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Thành phần</th>
+                           <td></td>
+                           <td></td>
+                           <td>72% Polyester, 28% Sợi viscose Machine wash or professional dry</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Hướng dẫn Bảo quản:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Clean</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">Mỏng:</th>
+                           <td></td>
+                           <td></td>
+                           <td>Không</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <b>Kích Thước & Phù Hợp</b>
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <table class="table table-hover">
+                      <tbody>
+                         <tr>
+                          <th scope="col">Kích thước</th>
+                          <th scope="col">Chiều cao</th>
+                          <th scope="col">Ngực</th>
+                          <th scope="col">Kích thước vòng eo</th>
+                         </tr>
+                         <tr>
+                           <th scope="row">8Y</th>
+                           <td>122-128</td>
+                           <td>66.5-69.5</td>
+                           <td>59.5-62.5</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">9Y</th>
+                           <td>128-134</td>
+                           <td>69.5-72.5</td>
+                           <td>62.5-65.5</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">10Y</th>
+                           <td>134-140</td>
+                           <td>72.5-75.5</td>
+                           <td>65.5-68.5</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">11-12Y</th>
+                           <td>146-152</td>
+                           <td>77-83</td>
+                           <td>70-76</td>
+                         </tr>
+                         <tr>
+                           <th scope="row">13-14Y</th>
+                           <td>158-164</td>
+                           <td>158-164</td>
+                           <td>76-82</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+            </div>
+          </div>    
+          </div>
+      </div>
+    </div>
+    <div id="footer">
+      <audio style="display: none" controls id="RR">
+        <source src="../Shared Resources/RR.mp3" type="audio/mpeg"/>
+      </audio>
+    </div>
+    <div id="footer">
+        <h1 class="credits">Các sản phẩm tương tự </h1>
+        <ul class="cd-gallery">
+          <li>
+            <a href="Product.html">
+              <ul class="cd-item-wrapper">
+                <li class="selected">
+                  <img src="img product/imgft2/imgft2_1.webp" alt="Preview image">
+                </li>
+      
+                <li class="move-right" data-sale="true" data-price="150.648đ">
+                  <img src="img product/imgft2/imgft2_2.webp" alt="Preview image">
+                </li>
+      
+                <li>
+                  <img src="img product/imgft2/imgft3_2.webp" alt="Preview image">
+                </li>
+              </ul> <!-- cd-item-wrapper -->
+            </a>
+      
+            <div class="cd-item-info">
+              <b><a href="#0">Áo thun may mắn </a></b>
+      
+              <em class="cd-price">190.648đ</em>
+            </div> <!-- cd-item-info -->
+          </li>
+      
+          <li>
+            <a href="Product.html">
+              <ul class="cd-item-wrapper">
+                <li class="selected">
+                  <img src="img/ugmonk-cap-1.jpg" alt="Preview image">
+                </li>
+      
+                <li class="move-right">
+                  <img src="img/ugmonk-cap-2.jpg" alt="Preview image">
+                </li>
+      
+                <li>
+                  <img src="img/ugmonk-cap-3.jpg" alt="Preview image">
+                </li>
+              </ul> <!-- cd-item-wrapper -->
+            </a>
+      
+            <div class="cd-item-info">
+              <b><a href="#0">Nón lưỡi trai</a></b>
+      
+              <em class="cd-price">100.289đ</em>
+            </div> <!-- cd-item-info -->
+          </li>
+      
+          <li>
+            <a href="Product.html">
+              <ul class="cd-item-wrapper">
+                <li class="selected">
+                  <img src="img/ugmonk-bag-1.jpg" alt="Preview image">
+                </li>
+      
+                <li class="move-right">
+                  <img src="img/ugmonk-bag-2.jpg" alt="Preview image">
+                </li>
+      
+                <li>
+                  <img src="img/ugmonk-bag-3.jpg" alt="Preview image">
+                </li>
+              </ul> <!-- cd-item-wrapper -->
+            </a>
+      
+            <div class="cd-item-info">
+              <b><a href="#0">Túi chéo thời trang</a></b>
+      
+              <em class="cd-price">150.001đ</em>
+            </div> <!-- cd-item-info -->
+          </li>
+      
+          <li>
+            <a href="Product.html">
+              <ul class="cd-item-wrapper">
+                <li class="selected">
+                  <img src="img/ugmonk-tshirt-1.jpg" alt="Preview image">
+                </li>
+      
+                <li class="move-right" data-sale="true" data-price="120.286đ">
+                  <img src="img/ugmonk-tshirt-2.jpg" alt="Preview image">
+                </li>
+      
+                <li>
+                  <img src="img/ugmonk-tshirt-3.jpg" alt="Preview image">
+                </li>
+              </ul> <!-- cd-item-wrapper -->
+            </a>
+      
+            <div class="cd-item-info">
+              <b><a href="#0">Áo Mountains</a></b>
+      
+              <em class="cd-price">$140.589đ</em>
+            </div> <!-- cd-item-info -->
+          </li>
+      
+          <li>
+            <a href="Product.html">
+              <ul class="cd-item-wrapper">
+                <li class="selected">
+                  <img src="img product/imgft4/imgft4_1.webp" alt="Preview image">
+                </li>
+      
+                <li class="move-right">
+                  <img src="img product/imgft4/imgft4_2.webp" alt="Preview image">
+                </li>
+      
+                <li>
+                  <img src="img product/imgft4/imgtf3_1.webp" alt="Preview image">
+                </li>
+              </ul> <!-- cd-item-wrapper -->
+            </a>
+      
+            <div class="cd-item-info">
+              <b><a href="#0">Thể thao mùa hè</a></b>
+      
+              <em class="cd-price">168.189đ</em>
+            </div> <!-- cd-item-info -->
+          </li>
+      
+          <li>
+            <a href="Product.html">
+              <ul class="cd-item-wrapper">
+                <li class="selected">
+                  <img src="img product/imgft5/imgft5_1.webp" alt="Preview image">
+                </li>
+      
+                <li class="move-right">
+                  <img src="img product/imgft5/imgft5_2.webp" alt="Preview image">
+                </li>
+      
+                <li>
+                  <img src="img product/imgft5/imgft6_1.webp" alt="Preview image">
+                </li>
+              </ul> <!-- cd-item-wrapper -->
+            </a>
+      
+            <div class="cd-item-info">
+              <b><a href="#0">Áo thun trượt</a></b>
+      
+              <em class="cd-price">134.574đ</em>
+            </div> <!-- cd-item-info -->
+          </li>
+        </ul> <!-- cd-gallery -->
+      <script src="js/jquery-2.1.1.js"></script>
+      <script src="js/jquery.mobile.min.js"></script>
+      <script src="js/main.js"></script> <!-- Resource jQuery -->
+    </div>
+  </body>
+</html>
