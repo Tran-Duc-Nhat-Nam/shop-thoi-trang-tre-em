@@ -10,157 +10,163 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="media-screen.css" />
     <script src="index.js" defer></script>
     <title>SCP Shop</title>
   </head>
   <body onload="fade()" id="bd">
-    <div id="header">
-      <div id="brand_logo">
-        <a href="index.html"
-          ><img src="./SCP-Logo.png" alt="Logo" id="logo"
-        /></a>
-        <p id="brand">Sincere, Comfortable, Perfect</p>
+    <div id="top">
+      <div id="header">
+        <div id="brand_logo">
+          <a href="index.html"
+            ><img src="./SCP-Logo.png" alt="Logo" id="logo"
+          /></a>
+          <p id="brand">Sincere, Comfortable, Perfect</p>
+        </div>
+        <div id="search_bar">
+          <input type="text" placeholder="Tìm kiếm..." id="search_area" />
+          <button id="search_button"></button>
+        </div>
+        <div id="b_section">
+          <a href="cart.html" id="cart_button"
+            ><img src="./Cart-Icon.png" id="cart_button_img"
+          /></a>
+          <a href="signup.html" id="signup_button">ĐĂNG KÝ</a>
+          <a href="signup.html" id="login_button">ĐĂNG NHẬP</a>
+        </div>
       </div>
-      <div id="search_bar">
-        <input type="text" placeholder="Tìm kiếm..." id="search_area" />
-        <button id="search_button"></button>
+      <div id="top_nav">
+        <a href="#" class="top_nav_link" id="current">Trang chủ</a>
+        <a href="about.html" class="top_nav_link">Giới thiệu</a>
+        <a href="about.html" class="top_nav_link">Khuyến mãi</a>
+        <a href="product.html" class="top_nav_link">Sản phẩm</a>
+        <a href="about.html" class="top_nav_link">Hỗ trợ</a>
+        <a href="about.html" class="top_nav_link">Chính sách</a>
+        <a href="about.html" class="top_nav_link">Tuyển dụng</a>
       </div>
-      <div id="b_section">
-        <a href="cart.html" id="cart_button"
-          ><img src="./Cart-Icon.png" id="cart_button_img"
-        /></a>
-        <a href="signup.html" id="signup_button">ĐĂNG KÝ</a>
-        <a href="signup.html" id="login_button">ĐĂNG NHẬP</a>
-      </div>
-    </div>
-    <div id="banner">
-      SCP - Sincere, Comfortable, Perfect - Chân thành, thoải mái, hoàn hảo
-    </div>
-    <div id="top_nav">
-      <a href="index.html" class="top_nav_link" id="current">Trang chủ</a>
-      <a href="about.html" class="top_nav_link">Giới thiệu</a>
-      <a href="about.html" class="top_nav_link">Khuyến mãi</a>
-      <a href="Product.html" class="top_nav_link">Sản phẩm</a>
-      <a href="about.html" class="top_nav_link">Hỗ trợ</a>
-      <a href="about.html" class="top_nav_link">Chính sách</a>
-      <a href="about.html" class="top_nav_link">Tuyển dụng</a>
     </div>
     <div id="slide_show">
-      <img src="./Banner-1.jpg" alt="" class="slide" id="slide_1" />
-      <img src="./kids-banner.jpg" alt="" class="slide" id="slide_2" />
-      <img src="./childrens-banner.jpg" alt="" class="slide" id="slide_3" />
+      <a href="./category.html" class="slide" id="slide_1"></a>
+      <a href="./category.html" class="slide" id="slide_2"></a>
+      <a href="./category.html" class="slide" id="slide_3"></a>
       <div id="selector">
         <div onclick="moveBanner(1, this)" class="option"></div>
-        <div onclick="moveBanner(2, this)" class="option"></div>
+        <div
+          onclick="moveBanner(2, this)"
+          class="option"
+          id="default_option"
+        ></div>
         <div onclick="moveBanner(3, this)" class="option"></div>
       </div>
     </div>
     <div id="side_nav">
-      <a href="category.html">Đồ bộ</a>
-      <a href="category.html">Áo</a>
-      <a href="category.html">Đầm</a>
-      <a href="category.html">Quần</a>
-      <a href="category.html">Váy</a>
+      <a href="category.html">Bộ sưu tập thời trang</a>
+      <a href="category.html">Quần áo bé trai</a>
+      <a href="category.html">Quần áo bé gái</a>
+      <a href="category.html">Quần áo trẻ sơ sinh</a>
+      <a href="category.html">Trang sức</a>
       <a href="category.html">Phụ kiện</a>
     </div>
     <div id="main_panel">
       <div class="main_section">
-        <div class="main_section_header">Set quần áo tiêu biểu</div>
+        <div class="main_section_header">Thời trang picnic</div>
         <div class="main_section_content">
           <div class="main_section_content_item">
-            <div>Quần sooc bé trai</div>
-            <img src="./quan-sooc-be-trai.jpg" alt="" />
-            <div>69.000 vnd</div>
+            <img src="./ao-khung-long-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Đầm bé gái</div>
-            <img src="./vay-be-gai.jpg" alt="" />
-            <div>420.000 vnd</div>
+            <img src="./quan-dai-kaki-be-gai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Quần sooc bé gái</div>
-            <img src="./quan-sooc-be-gai.jpg" alt="" />
-            <div>96.000 vnd</div>
+            <img src="./ao-thun-ke-sac-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Áo thun bé trai</div>
-            <img src="./ao-thun-be-trai.jpg" alt="" />
-            <div>365.000 vnd</div>
+            <img src="./ao-khoac-tho-ni-be-trai.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="main_section">
-        <div class="main_section_header">Set quần áo tiêu biểu</div>
+        <div class="main_section_header">Thời trang bé gái</div>
         <div class="main_section_content">
           <div class="main_section_content_item">
-            <div>Quần sooc bé trai</div>
-            <img src="./quan-sooc-be-trai.jpg" alt="" />
-            <div>69.000 vnd</div>
+            <img src="./ao-khung-long-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Đầm bé gái</div>
-            <img src="./vay-be-gai.jpg" alt="" />
-            <div>420.000 vnd</div>
+            <img src="./quan-dai-kaki-be-gai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Quần sooc bé gái</div>
-            <img src="./quan-sooc-be-gai.jpg" alt="" />
-            <div>96.000 vnd</div>
+            <img src="./ao-thun-ke-sac-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Áo thun bé trai</div>
-            <img src="./ao-thun-be-trai.jpg" alt="" />
-            <div>365.000 vnd</div>
+            <img src="./ao-khoac-tho-ni-be-trai.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="main_section">
-        <div class="main_section_header">Set quần áo tiêu biểu</div>
+        <div class="main_section_header">Thời trang bé trai</div>
         <div class="main_section_content">
           <div class="main_section_content_item">
-            <div>Quần sooc bé trai</div>
-            <img src="./quan-sooc-be-trai.jpg" alt="" />
-            <div>69.000 vnd</div>
+            <img src="./ao-khung-long-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Đầm bé gái</div>
-            <img src="./vay-be-gai.jpg" alt="" />
-            <div>420.000 vnd</div>
+            <img src="./quan-dai-kaki-be-gai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Quần sooc bé gái</div>
-            <img src="./quan-sooc-be-gai.jpg" alt="" />
-            <div>96.000 vnd</div>
+            <img src="./ao-thun-ke-sac-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div>Áo thun bé trai</div>
-            <img src="./ao-thun-be-trai.jpg" alt="" />
-            <div>365.000 vnd</div>
+            <img src="./ao-khoac-tho-ni-be-trai.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="main_section">
-        <div class="main_section_header">Set quần áo tiêu biểu</div>
+        <div class="main_section_header">Bộ sưu tập phụ kiện</div>
         <div class="main_section_content">
           <div class="main_section_content_item">
-            <div class="main_section_content_item_name">Quần sooc bé trai</div>
-            <img src="./quan-sooc-be-trai.jpg" alt="" />
-            <div>69.000 vnd</div>
+            <img src="./ao-khung-long-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div class="main_section_content_item_name">Đầm bé gái</div>
-            <img src="./vay-be-gai.jpg" alt="" />
-            <div>420.000 vnd</div>
+            <img src="./quan-dai-kaki-be-gai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div class="main_section_content_item_name">Quần sooc bé gái</div>
-            <img src="./quan-sooc-be-gai.jpg" alt="" />
-            <div>96.000 vnd</div>
+            <img src="./ao-thun-ke-sac-be-trai.jpg" alt="" />
           </div>
           <div class="main_section_content_item">
-            <div class="main_section_content_item_name">Áo thun bé trai</div>
-            <img src="./ao-thun-be-trai.jpg" alt="" />
-            <div>365.000 vnd</div>
+            <img src="./ao-khoac-tho-ni-be-trai.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="main_section">
+        <div class="main_section_header">Quần áo bán chạy</div>
+        <div class="main_section_content">
+          <div class="main_section_content_item">
+            <img src="./ao-khung-long-be-trai.jpg" alt="" />
+          </div>
+          <div class="main_section_content_item">
+            <img src="./quan-dai-kaki-be-gai.jpg" alt="" />
+          </div>
+          <div class="main_section_content_item">
+            <img src="./ao-thun-ke-sac-be-trai.jpg" alt="" />
+          </div>
+          <div class="main_section_content_item">
+            <img src="./ao-khoac-tho-ni-be-trai.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="main_section">
+        <div class="main_section_header">Quần áo mới nhất</div>
+        <div class="main_section_content">
+          <div class="main_section_content_item">
+            <img src="./ao-khung-long-be-trai.jpg" alt="" />
+          </div>
+          <div class="main_section_content_item">
+            <img src="./quan-dai-kaki-be-gai.jpg" alt="" />
+          </div>
+          <div class="main_section_content_item">
+            <img src="./ao-thun-ke-sac-be-trai.jpg" alt="" />
+          </div>
+          <div class="main_section_content_item">
+            <img src="./ao-khoac-tho-ni-be-trai.jpg" alt="" />
           </div>
         </div>
       </div>
